@@ -17,6 +17,6 @@ WORKDIR /home/main
 # Install CLASS
 RUN git clone https://github.com/lesgourg/class_public/ class && cd class && make
 # Install classy
-# RUN cd class/python && python setup.py install
+RUN cd class/python && python setup.py install
 # drop into a bash for debugging
-RUN /bin/bash
+# RUN /bin/bash
