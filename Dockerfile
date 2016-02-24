@@ -2,12 +2,21 @@ FROM andrewosh/binder-base
 
 MAINTAINER Thomas Tram <thomas.tram@port.ac.uk>
 
+LABEL description="Running interactive class"
+
 USER root
 
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+  gcc \
+  git \
+  build-essential
+
+WORKDIR /home/main
+
 # Install CLASS
-#RUN git clone https://github.com/lesgourg/class_public/ class && cd class && make
-RUN curl -sSL -k https://github.com/lesgourg/class_public/archive/2.4.tar.gz | tar -v -xz
-RUN apt-get update
-RUN ./breakbreakbreak
-RUN apt-get -y install gcc
-RUN cd class_public-2.4 && make &>makeout.txt && cat makeout.txt
+RUN git clone https://github.com/lesgourg/class_public/ class && cd class && make
+# Install classy
+# RUN cd class/python && python setup.py install
+# drop into a bash for debugging
+RUN /bin/bash
