@@ -1,4 +1,5 @@
 #!/bin/bash
+pip install cython
 git clone https://github.com/lesgourg/class_public
 cd class_public
 make
