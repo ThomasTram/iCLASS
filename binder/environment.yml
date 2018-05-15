@@ -1,0 +1,6 @@
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - scipy
+  - cython
