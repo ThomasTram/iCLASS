@@ -1,6 +1,6 @@
 # iCLASS
 Interactive CLASS notebooks
-[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/ThomasTram/iCLASS)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ThomasTram/iCLASS/master?filepath=index.ipynb)
 
 ## instructions for devs
 
